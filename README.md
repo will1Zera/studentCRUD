@@ -4,7 +4,7 @@
   <a href="#sobre-">Sobre</a>
 </p>
 <p align="center"> 
-  StudentCRUD é um crud capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar.
+  StudentCRUD é um CRUD capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar.
 </p>
 <p align="center">
   <img src="/crud.gif" align="center" style="border-radius: 10px" />
@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 
 ### Descrição
-StudentCRUD é um crud capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar.
+StudentCRUD é um CRUD capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar. Os dados dos alunos são salvos em um banco de dados MySQL.
 
 
 ### Objetivo

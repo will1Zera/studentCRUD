@@ -8,10 +8,8 @@
   Também permite que mande um e-mail para mim através de um formulário de contato.
 </p>
 <p align="center">
-  <img src="/public/employ.gif" align="center" style="border-radius: 10px" />
+  <img src="/crud.gif" align="center" style="border-radius: 10px" />
 </p>
-
-Link para o [servidor hospedado](https://employy.netlify.app/)
 
 ## Tecnologias 👨‍💻 
 Esse projeto foi desenvolvido com as seguintes tecnologias:

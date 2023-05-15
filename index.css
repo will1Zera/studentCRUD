@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+
+#container {
+    background-color: #3700B3;
+    color: white;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    height: 75px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    margin-top: 8px;
+}
+
+#navbar-title span{
+    font-weight: 400;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 60px;
+    transition: 0.3s;
+}
+
+.navbar-links a:hover {
+    color: rgb(202, 202, 202);
+}
+
+/* Tabela */
+
+#container-table{
+    width: 100%;
+    height: 100%;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 15px;
+}
+
+/* Botão */
+
+#button-container{
+    display: flex;
+}
+
+#button-editar:hover {
+    opacity: 80%;
+}
+
+#button-editar{
+    color: #3700B3;
+    background-color: white;
+    border: 1px solid #3700B3;
+    font-size: 13px;
+    padding: 10px 25px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-right: 15px;
+}
+
+#button-deletar:hover {
+    opacity: 80%;
+}
+
+#button-deletar{
+    color: #FF5D3F;
+    background-color: white;
+    border: 1px solid #FF5D3F;
+    font-size: 13px;
+    padding: 10px 23px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#button-table{
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+#button{
+    color: white;
+    background-color: #3700B3;;
+    border: none;
+    font-size: 13px;
+    padding: 10px 23px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#button:hover {
+    opacity: 80%;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: none;
+}
+

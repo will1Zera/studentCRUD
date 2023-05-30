@@ -1,11 +1,11 @@
 <?php 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "studentcrud";
+    // Usuário deslogado, redireciona para tela de login
+    session_start();
+    require_once("../../methods/verification.php");
+    verification("pages/login/login.php");    
 
     // Criando a conexão
-    $connection = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    require_once('../../methods/conexao.php');
 
     // Iniciando as variaveis
     $id = "";
@@ -91,7 +91,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentCRUD - Novo aluno</title>
-    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div>
@@ -101,6 +101,7 @@
                 <div class="navbar-links">
                     <a href="/studentcrud/index.php">inicio</a>
                     <a href="/studentcrud/create.php">aluno</a>
+                    <a href="/studentcrud/methods/logout.php">sair</a>
                 </div>
             </div>
         </div>

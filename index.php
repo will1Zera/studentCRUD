@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
     <title>StudentCRUD</title>
 </head>
 <body>
@@ -16,7 +16,8 @@
                 <div id="navbar-title"><h2><span>Student</span>CRUD</h2></div>
                 <div class="navbar-links">
                     <a href="/studentcrud/index.php">inicio</a>
-                    <a href="/studentcrud/create.php">aluno</a>
+                    <a href="/studentcrud/pages/create/create.php">aluno</a>
+                    <a href="/studentcrud/methods/logout.php">sair</a>
                 </div>
             </div>
         </div>
@@ -35,14 +36,13 @@
                 </thead>
                 <tbody>
                     <?php 
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $database = "studentcrud";
+                        // Usuário deslogado, redireciona para tela de login
+                        session_start();
+                        require_once("methods/verification.php");
+                        verification("pages/login/login.php");
 
                         // Criando a conexão
-                        // Substituição do mysqli para o PDO
-                        $connection = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+                        require_once('methods/conexao.php');
 
                         $sql = "SELECT * FROM students";      // Consulta a tabela students
                         $result = $connection->query($sql);   // Armazenando o resultado da consulta com o query()
@@ -64,8 +64,8 @@
                                     <td>$row[semester]</td>
                                     <td>$row[course]</td>
                                     <td id='button-container'>
-                                        <a id='button-editar' href='/studentcrud/edit.php?id=$row[id]'><i class='fa-regular fa-pen-to-square mr-1'></i>Editar</a>
-                                        <a id='button-deletar' btn-sm' href='/studentcrud/delete.php?id=$row[id]'><i class='fa-regular fa-circle-xmark mr-1'></i>Deletar</a>
+                                        <a id='button-editar' href='/studentcrud/pages/edit/edit.php?id=$row[id]'><i class='fa-regular fa-pen-to-square mr-1'></i>Editar</a>
+                                        <a id='button-deletar' btn-sm' href='/studentcrud/methods/delete.php?id=$row[id]'><i class='fa-regular fa-circle-xmark mr-1'></i>Deletar</a>
                                     </td>
                                 </tr>
                             ";
@@ -75,7 +75,7 @@
             </table>
         </div>    
         <div id="button-table">
-            <a id="button" href="/studentcrud/create.php" role="button"><i class="fa-solid fa-user-plus mr-1"></i>Adicionar</a>
+            <a id="button" href="/studentcrud/pages/create/create.php" role="button"><i class="fa-solid fa-user-plus mr-1"></i>Adicionar</a>
         </div>
     </div>
 </body>

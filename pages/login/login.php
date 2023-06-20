@@ -11,10 +11,11 @@
 <body>
     <div class="container">
         <form class="form-container" action="/studentcrud/methods/login.php" method="post" class="container-form">
-            <h2>StudentCRUD</h2>
-            <input type="email" name="email" placeholder="Email" autocomplete="off">
+            <h2><img src="../../img/studentColor.png" alt="Logo">StudentCRUD</h2>
+            <input type="email" name="email" placeholder="E-mail" autocomplete="off">
             <input type="password" name="password" placeholder="Senha">
             <button type="submit">Entrar</button>
+            <p>Não é um usuário?<a href="https://www.google.com/" target="_blank"> Cadastre-se</a></p>
         </form>
     </div>
 </body>

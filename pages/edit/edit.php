@@ -90,18 +90,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>StudentCRUD - Novo aluno</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+
+        function mascaraCpf(input){
+            // Remove caracteres não numéricos
+            var valor = input.value.replace(/\D/g, ''); 
+            // Aplica a máscara
+            valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+            valor = valor.replace(/(\d{3})(\d)/, '$1.$2'); 
+            valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
+
+            input.value = valor;
+        }
+
+        function mascaraNascimento(input){
+            // Remove qualquer caracter que não seja número
+            var valor = input.value.replace(/\D/g, '');
+            // Aplica a máscara
+            valor = valor.replace(/^(\d{2})(\d)/, '$1/$2');
+            valor = valor.replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
+
+            input.value = valor;
+        }
+
+        function mascaraMatricula(input){
+            // Remove qualquer caracter que não seja número
+            var valor = input.value.replace(/\D/g, '');
+
+            input.value = valor;
+        }
+
+        function mascaraSemestre(input){
+            // Remove qualquer caracter que não seja número
+            var valor = input.value.replace(/\D/g, '');
+            // Aplica a máscara
+            valor = valor.replace(/^(\d{2})(\d)/, '$1/$2');
+
+            input.value = valor;
+        }
+
+    </script>
 </head>
 <body>
     <div>
         <div class="container">
             <div class="navbar">
                 <div class="navbar-title"><h1><span>Student</span>CRUD</h1></div>
+                <div class="navbar-bar">
+                    <input type="text" name="pesquisa" class="teste" placeholder="Pesquisar...">
+                    <a><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
                 <div class="navbar-links">
                     <a href="/studentcrud/index.php">inicio</a>
-                    <a href="/studentcrud/create.php">aluno</a>
-                    <a href="/studentcrud/methods/logout.php">sair</a>
+                    <a href="/studentcrud/pages/create/create.php">aluno</a>
+                    <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </div>
             </div>
         </div>
@@ -116,25 +161,25 @@
             </div>
             <div class="">
                 <div class="input-container">
-                    <input type="text" class="text-input" placeholder="Digite seu CPF" name="cpf" value="<?php print $cpf; ?>">
+                    <input type="text" class="text-input" oninput="mascaraCpf(this)" maxlength="14" placeholder="Digite seu CPF" name="cpf" value="<?php print $cpf; ?>">
                     <label class="label">CPF</label>
                 </div>
             </div>
             <div class="">
                 <div class="input-container">
-                    <input type="text" class="text-input" placeholder="Digite sua data de nascimento" name="birth" value="<?php print $birth; ?>">
+                    <input type="text" class="text-input" oninput="mascaraNascimento(this)" maxlength="10" placeholder="Digite sua data de nascimento" name="birth" value="<?php print $birth; ?>">
                     <label class="label">Data</label>
                 </div>
             </div>
             <div class="">
                 <div class="input-container">
-                    <input type="text" class="text-input" placeholder="Digite seu número de matricula" name="registration" value="<?php print $registration; ?>">
+                    <input type="text" class="text-input" oninput="mascaraMatricula(this)" maxlength="13" placeholder="Digite seu número de matricula" name="registration" value="<?php print $registration; ?>">
                     <label class="label">Matricula</label>
                 </div>
             </div>
             <div class="">
                 <div class="input-container">
-                    <input type="text" class="text-input" placeholder="Digite o semestre de ingresso" name="semester" value="<?php print $semester; ?>">
+                    <input type="text" class="text-input" oninput="mascaraSemestre(this)" maxlength="7" placeholder="Digite o semestre de ingresso" name="semester" value="<?php print $semester; ?>">
                     <label class="label">Semestre</label>
                 </div>
             </div>

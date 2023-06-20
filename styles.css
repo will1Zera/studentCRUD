@@ -51,6 +51,28 @@ h2 {
     color: rgb(202, 202, 202);
 }
 
+input{
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+    padding: 0px 40px 0px 15px;
+}
+
+.fa-arrow-right-to-bracket{
+    margin-left: 10px;
+}
+
+.fa-magnifying-glass{
+    color: #3700B3;
+    position: relative;
+    right: 35px;
+    cursor: pointer;
+}
+
 /* Tabela */
 
 #container-table{

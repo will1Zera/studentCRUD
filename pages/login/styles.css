@@ -20,34 +20,55 @@
 
 h2{
     color: #3700B3;
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+img{
+    position: relative;
+    top: 15px;
+    right: 10px;
 }
 
 button{
     color: white;
     background-color: #3700B3;
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    width: 150px;
-    height: 35px;
-    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: all 0.3s;
-    margin-right: 10px;
 }
 
 button:hover {
    opacity: 80%;
 }
 
+p{
+    margin-top: 30px;
+}
+
+a{
+    color: #3700B3;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 input{
     padding: 0.6rem;
-    width: 250px;
-    border: 1px solid black;
-    border-radius: 15px;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
     font-size: 16px;
     outline: none;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border: none;
+    box-shadow: 0 0 1px 1px rgba(55, 0, 179);
 }

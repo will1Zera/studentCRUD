@@ -2,6 +2,12 @@
     // Criando a conexão
     require_once('conexao.php');
 
+    // Verifica se os campos e-mail e senha estão vazios
+    if(empty($_POST['email']) || empty($_POST['password'])){
+        header("location: /studentcrud/pages/login/login.php?error=campos_vazios");
+        exit(); // Encerra o script
+    }
+
     // Filtro contra injeção de código
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     // Cripto md5 de senha
@@ -21,6 +27,6 @@
         $_SESSION['email'] = $user['email'];
         header("location: /studentcrud/index.php");
     } else{
-        header("location: /studentcrud/pages/login/login.php");
+        header("location: /studentcrud/pages/login/login.php?error=usuario_invalido");
     }
 ?>

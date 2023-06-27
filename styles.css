@@ -59,7 +59,7 @@ input{
     font-size: 15px;
     outline: none;
     transition: all 0.3s;
-    padding: 0px 40px 0px 15px;
+    padding: 0px 40px 0px 50px;
 }
 
 .fa-arrow-right-to-bracket{
@@ -71,6 +71,31 @@ input{
     position: relative;
     right: 35px;
     cursor: pointer;
+}
+
+select{
+    border: none;
+    width: 45px;
+    height: 30px;
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: gray;
+    cursor: pointer;
+    padding: 0px 7px 0px 7px;
+    font-size: 14px;
+    position: relative;
+    left: 50px;
+}
+
+select option{
+    font-size: 14px;
+    color: gray;
+}
+
+select:focus {
+    outline: none;
 }
 
 /* Tabela */
@@ -140,22 +165,149 @@ input{
     border-radius: 18px;
     text-decoration: none;
     transition: all 0.3s;
+    margin-bottom: 40px;
 }
 
 #button:hover {
     opacity: 80%;
 }
 
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 200px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
+#container-table{
+    overflow-x: auto;
+}
+
+.mobile-menu-icon{
     display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.navbar-menu{
+    background-color: #3700B3;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    animation: showSidebar 1s;
+}
+
+@keyframes showSidebar{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    #navbar {
+        max-width: 90%;
+    }
+
+    #button-editar i,
+    #button-deletar i{
+       display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar-bar input{
+        width: 200px;
+    }
+
+    #button-editar,
+    #button-deletar{
+        font-size: 12px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #navbar-title{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    td{
+        font-size: 13px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+
+    .mobile-menu-icon button:focus {
+        outline: none;
+    }
+
+    .mobile-menu-icon button i {
+        color: white;
+        font-size: 16px;
+    }
+
+    .mobile-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 3s;
+    }
+
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        margin: 10px 0px 30px 0px;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .open{
+        display: flex;
+        transform: translateY(0);
+        animation: fade-in 1s;
+    }
+
+    @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar-bar input {
+        width: 150px;
+        padding: 0px 40px 0px 40px;
+    }
+
+    select{
+        width: 35px;
+        height: 30px;
+        padding: 0px 0px 0px 7px;
+        font-size: 13px;
+        left: 40px;
+    }
+    
+    select option{
+        font-size: 13px;
+    }
 }
 

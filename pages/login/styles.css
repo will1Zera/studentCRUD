@@ -1,36 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.form-container{
-    width: 100vh;
+.form-container {
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: auto;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
-h2{
+h2 {
     color: #3700B3;
     font-size: 35px;
     margin-bottom: 30px;
 }
 
-img{
+img {
     position: relative;
     top: 15px;
     right: 10px;
 }
 
-button{
+button {
     color: white;
     background-color: #3700B3;
     font-family: 'Inter', sans-serif;
@@ -44,20 +44,26 @@ button{
 }
 
 button:hover {
-   opacity: 80%;
+    opacity: 80%;
 }
 
-p{
-    margin-top: 30px;
+p {
+    color: red;
+    position: absolute;
+    top: 75%;
 }
 
-a{
+.paragrafo {
+    color: black;
+}
+
+a {
     color: #3700B3;
     cursor: pointer;
     text-decoration: none;
 }
 
-input{
+input {
     padding: 0.6rem;
     width: 300px;
     border: 1px solid gray;
@@ -71,4 +77,31 @@ input{
 input:focus {
     border: none;
     box-shadow: 0 0 1px 1px rgba(55, 0, 179);
+}
+
+@media (max-width: 380px) {
+    .form-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+  
+    input,
+    button {
+        width: 100%;
+    }
+  
+    h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+  
+    p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    img {
+       display: none;
+    }
 }

@@ -132,6 +132,21 @@
             input.value = valor;
         }
 
+        function showMenu(){
+            let menuMobile = document.getElementsByClassName("mobile-menu")[0];
+            let menuIcon = document.getElementsByClassName("fa-solid")[2];
+
+            if(menuMobile.classList.contains('open')){
+                menuMobile.classList.remove('open');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else{
+                menuMobile.classList.add('open');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -140,6 +155,15 @@
             <div class="navbar">
                 <div class="navbar-title"><h1><span>Student</span>CRUD</h1></div>
                 <div class="navbar-bar">
+                    <select id="search-option" onchange="filterTable()">
+                        <option value="id">ID</option>
+                        <option value="nome">Nome</option>
+                        <option value="cpf">CPF</option>
+                        <option value="nascimento">Nascimento</option>
+                        <option value="matricula">Matricula</option>
+                        <option value="semestre">Semestre</option>
+                        <option value="curso">Curso</option>
+                    </select>
                     <input type="text" name="pesquisa" class="teste" placeholder="Pesquisar...">
                     <a><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
@@ -148,6 +172,16 @@
                     <a href="/studentcrud/pages/create/create.php">aluno</a>
                     <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </div>
+                <div class="mobile-menu-icon">
+                    <button onclick="showMenu()"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-menu">
+            <div class="mobile-menu">
+                <a href="/studentcrud/index.php">inicio</a>
+                <a href="/studentcrud/pages/create/create.php">aluno</a>
+                <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </div>
         </div>
         <form method="post" class="container-form">

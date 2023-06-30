@@ -7,7 +7,7 @@
   StudentCRUD é um CRUD capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar.
 </p>
 <p align="center">
-  <img src="/crud.gif" align="center" style="border-radius: 10px" />
+  <img src="img/crud.gif" align="center" style="border-radius: 10px" />
 </p>
 
 ## Tecnologias 👨‍💻 

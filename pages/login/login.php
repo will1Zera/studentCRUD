@@ -6,18 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>StudentCRUD - Login</title>
-    <script>
-        // Função que remove a mensagem de erro
-        function removeErrorMessage(){
-            var emailValue = document.getElementById('email');
-            var passwordValue = document.getElementById('password');
-
-            localStorage.setItem('email', emailValue.value);
-            localStorage.setItem('password', passwordValue.value);
-            
-            document.getElementById('error_message').style.display = 'none';
-        }
-    </script>
 </head>
 
 <body>
@@ -41,10 +29,8 @@
                     }
                 }            
             ?>
-            <!-- 
-            <p class="paragrafo">Não é um usuário?<a href="https://www.google.com/" target="_blank"> Cadastre-se</a></p>
-            -->
         </form>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 
 function removeErrorMessage(){
-    var emailValue = document.getElementById('email');
-    var passwordValue = document.getElementById('password');
+    let emailValue = document.getElementById('email');
+    let passwordValue = document.getElementById('password');
 
     localStorage.setItem('email', emailValue.value);
     localStorage.setItem('password', passwordValue.value);

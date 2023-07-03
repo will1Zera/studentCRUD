@@ -1,7 +1,7 @@
 
 function mascaraCpf(input){
     // Remove caracteres não numéricos
-    var valor = input.value.replace(/\D/g, ''); 
+    let valor = input.value.replace(/\D/g, ''); 
     // Aplica a máscara
     valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
     valor = valor.replace(/(\d{3})(\d)/, '$1.$2'); 
@@ -12,7 +12,7 @@ function mascaraCpf(input){
 
 function mascaraNascimento(input){
     // Remove qualquer caracter que não seja número
-    var valor = input.value.replace(/\D/g, '');
+    let valor = input.value.replace(/\D/g, '');
     // Aplica a máscara
     valor = valor.replace(/^(\d{2})(\d)/, '$1/$2');
     valor = valor.replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');
@@ -22,14 +22,14 @@ function mascaraNascimento(input){
 
 function mascaraMatricula(input){
     // Remove qualquer caracter que não seja número
-    var valor = input.value.replace(/\D/g, '');
+    let valor = input.value.replace(/\D/g, '');
 
     input.value = valor;
 }
 
 function mascaraSemestre(input){
     // Remove qualquer caracter que não seja número
-    var valor = input.value.replace(/\D/g, '');
+    let valor = input.value.replace(/\D/g, '');
     // Aplica a máscara
     valor = valor.replace(/^(\d{2})(\d)/, '$1/$2');
 

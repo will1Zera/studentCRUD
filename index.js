@@ -19,12 +19,12 @@ function showMenu(){
 }
 
 function filterTable() {
-    var input, filter, table, tr, td, i;
+    let input, filter, table, tr, td, i;
     input = document.getElementById("pesquisa");
     filter = input.value.toUpperCase();
     table = document.getElementById("students-table");
     tr = table.getElementsByTagName("tr");
-    var searchOption = document.getElementById("search-option").value;
+    let searchOption = document.getElementById("search-option").value;
 
     // Percorre por todas as linhas (ignorando a primeira linha do cabeçalho)
     for (i = 1; i < tr.length; i++) {

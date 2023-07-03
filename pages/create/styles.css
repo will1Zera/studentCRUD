@@ -35,6 +35,9 @@ h2{
     height: 75px;
     margin-right: auto;
     margin-left: auto;
+
+    animation: slideInDown;
+    animation-duration: 0.6s;
 }
 
 .navbar-title {
@@ -119,6 +122,9 @@ select:focus {
     align-items: center;
     margin-right: auto;
     margin-left: auto;
+
+    animation: zoomIn;
+    animation-duration: 0.5s;
 }
 
 /* Input */

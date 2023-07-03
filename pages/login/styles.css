@@ -16,6 +16,9 @@
     align-items: center;
     margin-right: auto;
     margin-left: auto;
+    
+    animation: zoomIn;
+    animation-duration: 0.5s;
 }
 
 h2 {
@@ -40,7 +43,7 @@ button {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s;    
 }
 
 button:hover {

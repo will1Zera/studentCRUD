@@ -23,6 +23,9 @@
     height: 75px;
     margin-right: auto;
     margin-left: auto;
+
+    animation: slideInDown;
+    animation-duration: 0.6s;
 }
 
 h2 {
@@ -166,6 +169,9 @@ select:focus {
     text-decoration: none;
     transition: all 0.3s;
     margin-bottom: 40px;
+
+    animation: zoomIn;
+    animation-duration: 1s;
 }
 
 #button:hover {
@@ -174,6 +180,9 @@ select:focus {
 
 #container-table{
     overflow-x: auto;
+
+    animation: zoomIn;
+    animation-duration: 0.5s;
 }
 
 .mobile-menu-icon{

@@ -4,7 +4,7 @@
 
     // Verifica se os campos e-mail e senha estão vazios
     if(empty($_POST['email']) || empty($_POST['password'])){
-        header("location: /studentcrud/pages/login/login.php?error=campos_vazios");
+        header("location: /pages/login/login.php?error=campos_vazios");
         exit(); // Encerra o script
     }
 
@@ -25,8 +25,8 @@
         $_SESSION['id'] = $user['id'];
         $_SESSION['name'] = $user['name'];
         $_SESSION['email'] = $user['email'];
-        header("location: /studentcrud/index.php");
+        header("location: /index.php");
     } else{
-        header("location: /studentcrud/pages/login/login.php?error=usuario_invalido");
+        header("location: /pages/login/login.php?error=usuario_invalido");
     }
 ?>

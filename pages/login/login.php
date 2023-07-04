@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <form class="form-container" action="/studentcrud/methods/login.php" method="post" class="container-form">
+        <form class="form-container" action="/methods/login.php" method="post" class="container-form">
             <h2><img src="../../img/studentColor.png" alt="Logo">StudentCRUD</h2>
             <input type="email" name="email" placeholder="E-mail" autocomplete="off" onclick="removeErrorMessage()" id="email">
             <input type="password" name="password" onclick="removeErrorMessage()" placeholder="Senha" id="password" >

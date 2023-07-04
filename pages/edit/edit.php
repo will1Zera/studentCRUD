@@ -114,9 +114,9 @@
                     <a><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
                 <div class="navbar-links">
-                    <a href="/studentcrud/index.php">inicio</a>
-                    <a href="/studentcrud/pages/create/create.php">aluno</a>
-                    <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                    <a href="/index.php">inicio</a>
+                    <a href="/pages/create/create.php">aluno</a>
+                    <a href="/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </div>
                 <div class="mobile-menu-icon">
                     <button onclick="showMenu()"><i class="fa-solid fa-bars"></i></button>
@@ -125,9 +125,9 @@
         </div>
         <div class="navbar-menu">
             <div class="mobile-menu">
-                <a href="/studentcrud/index.php">inicio</a>
-                <a href="/studentcrud/pages/create/create.php">aluno</a>
-                <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                <a href="/index.php">inicio</a>
+                <a href="/pages/create/create.php">aluno</a>
+                <a href="/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </div>
         </div>
         <form method="post" class="container-form">
@@ -196,7 +196,7 @@
                     <button type="submit" class="button-enviar">Enviar</button>
                 </div>
                 <div class="">
-                    <a class="button-cancelar" href="/studentcrud/index.php" role="button">Cancelar</a>
+                    <a class="button-cancelar" href="/index.php" role="button">Cancelar</a>
                 </div>
             </div>
         </form>

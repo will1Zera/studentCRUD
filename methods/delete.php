@@ -12,6 +12,6 @@
     }
 
     // Depois de deletado, redireciona para a página home e sai do script PHP
-    header("location: /studentcrud/index.php");
+    header("location: /index.php");
     exit;
 ?>

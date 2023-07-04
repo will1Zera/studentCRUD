@@ -29,9 +29,9 @@
                     <a><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
                 <div class="navbar-links">
-                    <a href="/studentcrud/index.php">inicio</a>
-                    <a href="/studentcrud/pages/create/create.php">aluno</a>
-                    <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                    <a href="/index.php">inicio</a>
+                    <a href="/pages/create/create.php">aluno</a>
+                    <a href="/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </div>
                 <div class="mobile-menu-icon">
                     <button onclick="showMenu()"><i class="fa-solid fa-bars"></i></button>
@@ -40,9 +40,9 @@
         </div>
         <div class="navbar-menu">
             <div class="mobile-menu">
-                <a href="/studentcrud/index.php">inicio</a>
-                <a href="/studentcrud/pages/create/create.php">aluno</a>
-                <a href="/studentcrud/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                <a href="/index.php">inicio</a>
+                <a href="/pages/create/create.php">aluno</a>
+                <a href="/methods/logout.php">sair<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </div>
         </div>
         <div id="container-table">
@@ -89,8 +89,8 @@
                                     <td>$row[semester]</td>
                                     <td>$row[course]</td>
                                     <td id='button-container'>
-                                        <a id='button-editar' href='/studentcrud/pages/edit/edit.php?id=$row[id]'><i class='fa-regular fa-pen-to-square mr-1'></i>Editar</a>
-                                        <a id='button-deletar' btn-sm' onclick='return confirmDelete()' href='/studentcrud/methods/delete.php?id=$row[id]'><i class='fa-regular fa-circle-xmark mr-1'></i>Deletar</a>
+                                        <a id='button-editar' href='/pages/edit/edit.php?id=$row[id]'><i class='fa-regular fa-pen-to-square mr-1'></i>Editar</a>
+                                        <a id='button-deletar' btn-sm' onclick='return confirmDelete()' href='/methods/delete.php?id=$row[id]'><i class='fa-regular fa-circle-xmark mr-1'></i>Deletar</a>
                                     </td>
                                 </tr>
                             ";
@@ -100,7 +100,7 @@
             </table>
         </div>    
         <div id="button-table">
-            <a id="button" href="/studentcrud/pages/create/create.php" role="button"><i class="fa-solid fa-user-plus mr-1"></i>Adicionar</a>
+            <a id="button" href="/pages/create/create.php" role="button"><i class="fa-solid fa-user-plus mr-1"></i>Adicionar</a>
         </div>
     </div>
     <script src="index.js"></script>

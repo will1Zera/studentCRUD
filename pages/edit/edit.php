@@ -24,7 +24,7 @@
         // Verifica se o id não existe
         if(!isset($_GET["id"])){
             // Redireciona para a página home caso não exista
-            header("location: /studentcrud/index.php");
+            header("location: /index.php");
             exit;
         }
         $id = $_GET["id"];
@@ -37,7 +37,7 @@
         // Verifica se o id existe na linha da tabela
         if(!$row){
             // Redireciona para a página home caso não exista
-            header("location: /studentcrud/index.php");
+            header("location: /index.php");
             exit;
         }
 
@@ -77,7 +77,7 @@
             $sucessMessage = "Aluno atualizado com sucesso!";
 
             // Redireciona para a página home e sai do script PHP
-            header("location: /studentcrud/index.php");
+            header("location: /index.php");
             exit;
 
         }while(false);

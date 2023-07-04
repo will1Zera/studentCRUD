@@ -16,9 +16,10 @@
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    
+    /*
     animation: zoomIn;
     animation-duration: 0.5s;
+    */
 }
 
 h2 {

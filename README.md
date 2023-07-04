@@ -7,7 +7,7 @@
   StudentCRUD é um CRUD capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar.
 </p>
 <p align="center">
-  <img src="img/crud.gif" align="center" style="border-radius: 10px" />
+  <img src="img/grudGif.gif" align="center" style="border-radius: 10px" />
 </p>
 
 Link para o [servidor hospedado](https://studentcrud-76ac634e3d30.herokuapp.com/)
@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 
 ### Descrição
-StudentCRUD é um CRUD capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar. Os dados dos alunos são salvos em um banco de dados MySQL. Além disso, o sistema possui uma área de login, permitindo o acesso apenas ao admin.
+StudentCRUD é um CRUD capaz de mostrar a tabela de alunos, criar um novo aluno, editar e apagar. Os dados dos alunos são salvos em um banco de dados MySQL. Além disso, o sistema possui uma área de login, permitindo o acesso apenas ao admin. O projeto e o banco de dados está hospedado em um servidor da Heroku.
 
 
 ### Objetivo
